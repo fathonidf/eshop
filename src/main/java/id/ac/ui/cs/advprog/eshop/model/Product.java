@@ -20,4 +20,12 @@ public class Product {
     public void setId(long id) {
         this.productId = id;
     }
+
+    public void setName(String name) {
+        this.productName = name;
+    }
+
+    public void setQuantity(int quantity) {
+        this.productQuantity = quantity;
+    }
 }
