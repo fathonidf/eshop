@@ -29,6 +29,13 @@ public class ProductController {
         return "redirect:list";
     }
 
+    @GetMapping("/{id}")
+    public String deleteProduct(@PathVariable long id){
+        service.delete(id);
+        // System.out.printf("sukses delete %d!\n", id);
+        return "redirect:list";
+    }
+
     @GetMapping("/list")
     public String productListPage(Model model) {
         List<Product> allProducts = service.findAll();
